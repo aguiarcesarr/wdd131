@@ -1,0 +1,13 @@
+:root variables (at the very top)
+
+Reset/utility styles (like * { box-sizing: border-box; })
+
+Base styles (like body, h1, p)
+
+Links and text (a, a:hover, strong, etc.)
+
+Layout structures (.container, .row, .col)
+
+Components (like .datatable, .button)
+
+Utilities or overrides (special tweaks, media queries
