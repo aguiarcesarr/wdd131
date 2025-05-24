@@ -94,3 +94,8 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+.footer-nav {
+    text-decoration: none;
+    text-align: right;
+}
