@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Page</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Place</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 400px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Hero Image">
+            </picture>
+        </section>
+        <section class="weather">
+            <h2>Weather ⛅</h2>
+            <p id="temperature">Temperature: 5°C</p>
+            <p id="wind-speed">Wind Speed: 10 km/h</p>
+            <p id="wind-chill">Wind Chill: <span id="wind-chill-value">N/A</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

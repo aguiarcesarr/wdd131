@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD131 Place Project</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Place Project</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+                <source media="(min-width: 400px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-small.webp" alt="Hero Image">
+            </picture>
+        </section>
+        <section class="weather">
+            <h2>Weather ⛅</h2>
+            <p id="windchill"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> - Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
