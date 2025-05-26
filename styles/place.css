@@ -51,9 +51,33 @@ main {
     object-fit: cover;
 }
 
+.data {
+    background: var(--dark-cyan);
+    color: var(--midnight-green);
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(36, 67, 71, 0.08);
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.data h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;  
+    position: relative;
+}
+
+.data ul {
+    list-style: disc;       
+    margin-left: 1.5rem;
+}
+
 .weather {
     background: var(--dark-cyan);
-    color: var(--ash-gray);
+    color: var(--midnight-green);
     padding: 1.5rem 1rem;
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(36, 67, 71, 0.08);
@@ -69,8 +93,9 @@ main {
     position: relative;
 }
 
+
 footer {
-    background-color: var(--dark-slate-gray);
+    background-color: var(--midnight-green);
     color: var(--dark-cyan);
     text-align: center;
     padding: 1rem;
@@ -97,3 +122,75 @@ footer {
     border-bottom: 2px solid var(--ash-gray);
     cursor: pointer;
 }
+
+.icon-desktop {
+  display: none !important;
+  font-size: 1.5em;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+.icon-mobile {
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  margin-right: 0.3em;
+}
+.icon-mobile svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  main {
+    display: block; /* Remove grid for overlay effect */
+    position: relative;
+  }
+
+  .hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero img,
+  .hero picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 60vh;
+  }
+
+  .data {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+    margin-top: 0;
+    max-width: 300px;
+    box-shadow: 0 4px 16px rgba(36,67,71,0.15);
+  }
+
+  .weather {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    margin-top: 0;
+    max-width: 300px;
+    box-shadow: 0 4px 16px rgba(36,67,71,0.15);
+  }
+
+  .icon-desktop {
+    display: inline-block !important;
+  }
+  .icon-mobile {
+    display: none !important;
+  }
+}
+
