@@ -13,25 +13,25 @@
     box-sizing: border-box;
 }
 
-body {
-    line-height: 1.6;
-    background-color: var(--sunset);
-    color: var(--dark-green);
-    padding: 0;
-    font-family: 'Edu QLD Beginner', cursive;
-}
+    body {
+        line-height: 1.6;
+        background-color: var(--sunset);
+        color: var(--dark-green);
+        padding: 0;
+        font-family: 'Edu QLD Beginner', cursive;
+    }
 
-header {
-    background-color: var(--dark-moss-green);
-    color: var(--lion);
-    padding: 1rem;
-    text-align: center;
-    font-family: 'Tagesschrift', cursive;
-}
+    header {
+        background-color: var(--dark-moss-green);
+        color: var(--lion);
+        padding: 1rem;
+        text-align: center;
+        font-family: 'Tagesschrift', cursive;
+    }
 
-header h1 {
-    font-size: 1.5rem;
-}
+    header h1 {
+        font-size: 1.5rem;
+    }
 
 nav {
     display: flex;

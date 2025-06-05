@@ -1,0 +1,38 @@
+:root {
+    --lion: #C8A16D;
+    --sunset: #E8C793;
+    --dark-moss-green: #4B4E23;
+    --raw-umber: #945A34;
+    --dark-green: #222C18;
+}
+
+/* Center all content */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style images */
+img {
+    display: block; /* Ensures images stack vertically */
+    width: 400px;
+    height: 600px;
+    margin: 20px auto; /* Centers images horizontally */
+    opacity: 0; /* Start invisible for fade-in effect */
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: var(--dark-moss-green);
+    background-color: var(--raw-umber);
+}

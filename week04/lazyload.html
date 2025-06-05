@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lazy Loading images example">
+    <meta name="author" content="Cesar Aguiar">
+    <title>Lazy Loading images</title>
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lazy Loaded Images</h1>
+    </header>
+    <main>
+        <img src="https://images.unsplash.com/photo-1551620832-e2af54f6f0b8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnJhemlsfGVufDB8MXwwfHx8MA%3D%3D"  alt="|Rio de Janeiro, Brazil|" height="400" width="600" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1621693247912-767f47a3c382?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YnJhemlsfGVufDB8MXwwfHx8MA%3D%3D" alt="Salvador, Brazil" height="400" width="600" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1593995863951-57c27e518295?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnJhemlsfGVufDB8MXwwfHx8MA%3D%3D" alt="Christ the Redeemer" height="400" width="600" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1489194889484-95eac94a140f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnJhemlsfGVufDB8MXwwfHx8MA%3D%3D" alt="Brown Cathedral" height="400" width="600" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1585436249848-3a8210d46a47?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGJyYXppbHxlbnwwfDF8MHx8fDA%3D" alt="Graffiti" height="400" width="600" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1671037876930-265bbf35e6a9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJyYXppbHxlbnwwfDF8MHx8fDA%3D" alt="Brazilian Jersey" height="400" width="600" loading="lazy">
+    </main>
+    <footer>
+           <p>&copy; <span id="currentyear"></span>Cesar Aguiar | Brazil</p>
+        <p id="LastModified"></p>
+    </footer>
+    <script src="scripts/lazyload.js"></script>
+</body>
+</html>

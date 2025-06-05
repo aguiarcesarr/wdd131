@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of temple images">
+    <meta name="author" content="Cesar Aguiar">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&family=Tagesschrift&display=swap" rel="stylesheet">
+    <title>Temple Album</title>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1><b><i>Temple Album</i></b></h1>
+        <button id="menu-button" aria-label="Menu">&#9776;</button>
+        <nav id="nav">
+            <ul>
+                <li><a href="#" class="active" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old (Pre-1900)</a></li>
+                <li><a href="#" data-filter="new">New (Post-2000)</a></li>
+                <li><a href="#" data-filter="large">Large (>90k sq ft)</a></li>
+                <li><a href="#" data-filter="small">Small (&lt;10k sq ft)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="main-heading">Temple Gallery</h1>
+        <div class="gallery">
+           <p class="loading-message">Loading temples...</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Cesar Aguiar | Brazil</p>
+        <p id="LastModified"></p>
+    </footer>
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+</html>
