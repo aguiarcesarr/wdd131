@@ -1,20 +1,30 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
+/* Root color variables */
+:root {
+  --bg-color: #1b1b1b;
+  --text-color: #f5f5f5;
+  --accent-color: #9d4edd;
+  --highlight-color: #5a189a;
+  --heading-color: #e0aaff;
 }
 
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+/* Header with logo */
 header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-}
-
-h1 {
-  font-size: 2rem;
+  border-bottom: 2px solid var(--highlight-color);
+  padding-bottom: 1rem;
 }
 
 header img {
@@ -22,7 +32,37 @@ header img {
   height: 50px;
 }
 
-svg {
-  width: 40px;
-  height: 40px;
+h1 {
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+/* Section headings */
+h2 {
+  font-family: 'Georgia', serif;
+  color: var(--accent-color);
+  border-left: 4px solid var(--highlight-color);
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Content sections */
+section {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(157, 78, 221, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+/* Links (if needed later) */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
