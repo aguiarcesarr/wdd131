@@ -1,0 +1,27 @@
+body {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #58a6ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#reviewCount {
+  font-size: 1.25rem;
+  background: #161b22;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  color: #c9d1d9;
+}
