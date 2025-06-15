@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shadowhunters Universe Guide</title>
+    <meta name="description" content="Contact us or suggest a correction for the Shadowhunters Universe Guide.">
+    <meta name="keywords" content="Shadowhunters, contact, suggestions, guide, fan-made">
+    <meta name="author" content="Cesar Aguiar">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+    <header>
+    <a href="index.html" class="logo-container">
+        <img src="images/enkeli.svg" alt="Site Logo"> <div class="hover-underline"><h1>Shadowhunters Guide</h1></div>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h1>Contact & Suggestions</h1>
+        <p>Have a suggestion or see something that needs correcting? Let us know!</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Shadowhunters Universe Guide | Your Name Here</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+        <a href="references.html">References</a>
+    </footer>
+
+</body>
+</html>
