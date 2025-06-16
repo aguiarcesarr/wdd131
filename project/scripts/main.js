@@ -34,9 +34,7 @@ function displayRandomCharacter() {
     charName.textContent = character.name;
     charDesc.textContent = character.description;
 }
-
-// Run the function when the page loads
-// We wrap it in a 'DOMContentLoaded' event to make sure all HTML is loaded first
+// Call the function to display a random character when the page loads
 document.addEventListener('DOMContentLoaded', displayRandomCharacter);
 
 // --- Contact Form Submission Counter ---
@@ -54,22 +52,24 @@ if (contactForm) {
 
     // Listen for the form submission
     contactForm.addEventListener("submit", (event) => {
-        // Prevent the form from actually submitting and reloading the page
         event.preventDefault(); 
 
-        // Increment the counter
         currentCount++;
         
-        // Update the display on the page
         submissionCountSpan.textContent = currentCount;
         
-        // Save the new count back to localStorage
         localStorage.setItem("submissionCount", currentCount);
 
-        // Optional: Give the user feedback
         alert("Thank you for your suggestion!");
         
-        // Optional: Reset the form fields after submission
         contactForm.reset();
     });
 }
+
+// --- Hamburger Menu Toggle ---
+const hamburgerButton = document.querySelector(".hamburger-btn");
+const mainNav = document.querySelector(".main-nav");
+
+hamburgerButton.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+});

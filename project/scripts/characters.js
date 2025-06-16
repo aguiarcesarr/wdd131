@@ -111,3 +111,11 @@ filterButtons.forEach(button => {
         }
     });
 });
+
+// --- Hamburger Menu Toggle ---
+const hamburgerButton = document.querySelector(".hamburger-btn");
+const mainNav = document.querySelector(".main-nav");
+
+hamburgerButton.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+});
