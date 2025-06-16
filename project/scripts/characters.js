@@ -19,14 +19,14 @@ const characters = [
         name: 'Alec Lightwood',
         type: 'Shadowhunter',
         description: 'The responsible and archer-extraordinaire head of the New York Institute. He is a compassionate leader and protector.',
-        imageUrl: 'images/alec.png'
+        imageUrl: 'images/alec-lightwood.jpg'
     },
     {
         id: 'isabelle',
         name: 'Isabelle Lightwood',
         type: 'Shadowhunter',
         description: 'A formidable and fashionable warrior who wields an electrum whip. She is fiercely loyal and a brilliant forensic pathologist.',
-        imageUrl: 'images/isabelle.png'
+        imageUrl: 'images/izzy-lightwood.jpg'
     },
     {
         id: 'magnus',
@@ -40,21 +40,21 @@ const characters = [
         name: 'Simon Lewis',
         type: 'Vampire',
         description: 'Clary\'s loyal best friend who is turned into a Daylighter—a vampire who can walk in the sun. He is a musician and a hero in his own right.',
-        imageUrl: 'images/simon.png'
+        imageUrl: 'images/simon-lewis.jpg'
     },
     {
         id: 'luke',
         name: 'Luke Garroway',
         type: 'Werewolf',
         description: 'A former Shadowhunter who is now the leader of the Manhattan werewolf pack. He acts as a father figure to Clary.',
-        imageUrl: 'images/luke.png'
+        imageUrl: 'images/luke-garroway.jpg'
     },
     {
         id: 'maia',
         name: 'Maia Roberts',
         type: 'Werewolf',
         description: 'A strong-willed and resilient member of the Manhattan werewolf pack. She overcomes a traumatic past to become a leader.',
-        imageUrl: 'images/maia.png'
+        imageUrl: 'images/maia-roberts.jpg'
     }
 ];
 
@@ -84,3 +84,30 @@ function displayCharacters(characterArray) {
 
 // Initial display of all characters when the page loads
 displayCharacters(characters);
+
+// --- Filtering Logic ---
+
+// Select all filter buttons
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // Get the data-type from the clicked button
+        const type = button.dataset.type;
+
+        // Remove 'active' class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        // Add 'active' class to the clicked button
+        button.classList.add("active");
+
+        // Use conditional branching to filter
+        if (type === 'all') {
+            // If 'all' is clicked, display the original full array
+            displayCharacters(characters);
+        } else {
+            // Otherwise, filter the array
+            const filteredCharacters = characters.filter(character => character.type === type);
+            displayCharacters(filteredCharacters);
+        }
+    });
+});

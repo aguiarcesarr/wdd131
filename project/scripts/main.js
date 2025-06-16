@@ -38,3 +38,38 @@ function displayRandomCharacter() {
 // Run the function when the page loads
 // We wrap it in a 'DOMContentLoaded' event to make sure all HTML is loaded first
 document.addEventListener('DOMContentLoaded', displayRandomCharacter);
+
+// --- Contact Form Submission Counter ---
+
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    const submissionCountSpan = document.querySelector("#submission-count");
+
+    // Get the current count from localStorage, or default to 0 if it doesn't exist
+    let currentCount = localStorage.getItem("submissionCount") || 0;
+
+    // Display the current count on the page
+    submissionCountSpan.textContent = currentCount;
+
+    // Listen for the form submission
+    contactForm.addEventListener("submit", (event) => {
+        // Prevent the form from actually submitting and reloading the page
+        event.preventDefault(); 
+
+        // Increment the counter
+        currentCount++;
+        
+        // Update the display on the page
+        submissionCountSpan.textContent = currentCount;
+        
+        // Save the new count back to localStorage
+        localStorage.setItem("submissionCount", currentCount);
+
+        // Optional: Give the user feedback
+        alert("Thank you for your suggestion!");
+        
+        // Optional: Reset the form fields after submission
+        contactForm.reset();
+    });
+}
