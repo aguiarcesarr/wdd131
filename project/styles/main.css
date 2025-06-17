@@ -384,41 +384,65 @@ footer {
     color: #aaa;
 }
 
-/* --- Hamburger Menu and Media Query --- */
+/* =================================================================== */
+/* --- MOBILE NAVIGATION & MEDIA QUERY (FINAL VERSION) --- */
+/* =================================================================== */
 
-/* Style for the hamburger button itself */
+/* 1. HAMBURGER BUTTON STYLING */
+/* This styles the button itself, which is hidden on desktop by default */
 .hamburger-btn {
-    display: none; /* Hidden by default on desktop */
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2.5rem;
-    height: 2.5rem;
+    display: none; /* Hidden on desktop */
+    position: relative;
+    z-index: 100; /* Ensures it's above other elements */
+    width: 3rem;
+    height: 3rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0;
-    z-index: 10;
 }
 
+/* This styles the three lines of the hamburger icon */
 .hamburger-btn span {
-    width: 2.5rem;
-    height: 0.25rem;
+    display: block;
+    width: 100%;
+    height: 4px;
     background-color: var(--text-color);
-    border-radius: 10px;
-    transition: all 0.3s linear;
+    border-radius: 2px;
+    position: absolute;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
+.hamburger-btn span:nth-child(1) {
+    top: 20%;
+}
+
+.hamburger-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-btn span:nth-child(3) {
+    bottom: 20%;
+}
+
+
+/* 2. MEDIA QUERY FOR MOBILE VIEW */
 @media (max-width: 768px) {
+
+    /* Show the hamburger button on mobile */
     .hamburger-btn {
-        display: flex;
+        display: block;
     }
 
+    /* Hide the original horizontal navigation on mobile */
     .main-nav {
         display: none;
-        position: absolute;
+        
+        /* These styles apply to the menu WHEN IT'S OPEN */
+        position: fixed; /* Covers the whole screen */
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background: var(--bg-color);
         flex-direction: column;
@@ -426,44 +450,41 @@ footer {
         align-items: center;
     }
 
+    /* This class is toggled by JavaScript. This is what MAKES THE MENU APPEAR. */
     .main-nav.active {
         display: flex;
     }
-    
+
+    /* Style the links inside the mobile menu */
     .main-nav ul {
         flex-direction: column;
-    }
-    
-    .main-nav ul li {
-        margin: 1.5rem 0;
         text-align: center;
     }
 
-    .main-nav ul li a {
+    .main-nav li {
+        margin: 1.5rem 0;
+    }
+
+    .main-nav a {
         font-size: 2rem;
+    }
+    
+    /* When the menu is active, animate the hamburger to an 'X' */
+    .main-nav.active + .hamburger-btn span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .main-nav.active + .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .main-nav.active + .hamburger-btn span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 }
 
-/* --- Mobile Responsiveness Fixes --- */
-
-@media (max-width: 768px) {
-  header {
-    justify-content: space-between;
-  }
-
-  nav.main-nav {
-    display: none;
-  }
-
-  nav.main-nav.active {
-    display: flex;
-  }
-
-  .hamburger-btn {
-      display: flex;
-  }
-
-  nav a {
-    font-size: 1.2rem;
-  }
+/* 3. FIX FOR FEATURED CHARACTER IMAGE */
+/* This ensures the homepage featured character is always a circle */
+#featured-character #character-card img {
+    border-radius: 50%;
 }
