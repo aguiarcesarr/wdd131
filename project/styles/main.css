@@ -230,6 +230,7 @@ a {
     object-fit: cover;
     border: 3px solid var(--accent-color);
     margin-bottom: 1rem;
+    border-radius: 50%;
 }
 
 .character-card h3 {
@@ -441,4 +442,28 @@ footer {
     .main-nav ul li a {
         font-size: 2rem;
     }
+}
+
+/* --- Mobile Responsiveness Fixes --- */
+
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
+
+  nav.main-nav {
+    display: none;
+  }
+
+  nav.main-nav.active {
+    display: flex;
+  }
+
+  .hamburger-btn {
+      display: flex;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
 }
